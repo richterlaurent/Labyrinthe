@@ -3,12 +3,12 @@
 ---- Labyrinthe ------
 ---------------------
 
-Project by Laurent Richter
-Initiated by OpenClassRooms
+Project by Laurent Richter.
+Initiated by OpenClassRooms.
 
-This is a Labyrinthe Game based on .txt maps placed in the 'maps' folder. 
+This is a Labyrinthe Game based on .txt maps (placed in the 'cartes' folder. 
 
-The whole code is in the 'sources' folder actually.
+The whole code is in the 'labyrinthes' folder actually.
 
 If you have any suggestion, do not hesitate tu disturb myself. 
 
