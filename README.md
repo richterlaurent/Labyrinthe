@@ -3,7 +3,7 @@
 ---- Labyrinthe ------
 ---------------------
 
-Project by Laurent Richter.\r
+Project by Laurent Richter.
 Initiated by OpenClassRooms.
 
 This is a Labyrinthe Game based on .txt maps (placed in the 'cartes' folder. 
