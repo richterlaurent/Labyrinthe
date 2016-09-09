@@ -1,3 +1,5 @@
+# -*-coding:utf-8 -*
+
 from mapReader import mapReader
 from mapPlayer import mapPlayer
 
@@ -65,7 +67,7 @@ class Game():
     def playMoves(self):
         '''
             The method to play the Game
-            @prama: None
+            @param: None
             @return: Boolean (if win or not)
         '''
         self.win = False
@@ -132,18 +134,4 @@ class Game():
             @param: None
             @return: None
         '''
-        print("Merci d'avoir joué avec nous.\nA la prochaine !\n")     
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        print("Merci d'avoir joué avec nous.\nA la prochaine !\n")

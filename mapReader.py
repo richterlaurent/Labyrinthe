@@ -1,12 +1,5 @@
-#!/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5
 # -*-coding:utf-8 -*
-'''
-Created on 7 sept. 2016
 
-This module establishes the whole reading communication with the map.
-
-@author: Richter
-'''
 import os
 
 
@@ -22,6 +15,11 @@ def singleton(classe_definie):
 
 @singleton
 class mapReader():
+
+    '''
+        mapReader object establishes the whole connection
+        between the datas and the game
+    '''
     
     @staticmethod
     def importMaps():
@@ -45,7 +43,7 @@ class mapReader():
         '''
         fileAccess = 'cartes/' + mapName
         with open(fileAccess, 'r') as file:
-            return list(file.read())
+           return list(file.read())
     
     @staticmethod
     def isTmpMap():
@@ -55,7 +53,7 @@ class mapReader():
             return False
             
       
-    @staticmethod        
+    @staticmethod
     def readTmpMap():
         '''
             This function returns the map stored in the 'tmp' folder if it exists
@@ -75,7 +73,6 @@ class mapReader():
         '''
             This method saves the list in parameter in the 'tmp' folder
             as a 'mapTmp.txt' file
-            
             @param : list (map to save)
             @return: None 
         '''
@@ -98,14 +95,3 @@ class mapReader():
     @staticmethod
     def deleteTmp():
         os.remove('tmp/mapTmp.txt')
-        
-
-
-
-
-
-
-
-
-
-
