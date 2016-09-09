@@ -1,7 +1,7 @@
 
-----------------------
----- Labyrinthe ------
----------------------
+------------------------
+------ Labyrinthe ------
+------------------------
 
 Project by Laurent Richter.
 
@@ -17,7 +17,15 @@ The 'roboc.py' is the main file to run.
 If you have any suggestion, do not hesitate to disturb myself. 
 
 
+------------------------
 
+LAUCHING :
+
+1. With command lines go in the 'Labyrinthe' folder
+2. Execute the following command  : "python3.5 roboc.py"
+3. Play
+
+------------------------
 
 CONTRIBUTING :
 
@@ -27,7 +35,7 @@ CONTRIBUTING :
 4. Push to the branch (git push origin my-new-feature)
 5. Create new Pull Request
 
-
+------------------------
 
 
 Thx.
