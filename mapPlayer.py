@@ -8,7 +8,7 @@ class mapPlayer():
         self._lineLength = mapList.index("\n") + 1
         self.door = False
         self.win = False
-        
+                    
         
     def moveNorth(self, moves):
         '''
@@ -162,7 +162,14 @@ class mapPlayer():
         
         
     def displayCurrentMap(self):
+        '''
+            This method displays the current mapList as a str
+            @param : None
+            @return : None (it prints the str directly)
+        '''
+        print("\n")
         print("".join(self.mapList))
+        print("\n")
         
         
         

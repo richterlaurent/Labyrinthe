@@ -26,10 +26,10 @@ class mapReader():
     @staticmethod
     def importMaps():
         ''' Function that import the maps from the maps diectory :
-        @param : none
-        @preturn : list of maps files
+            @param : none
+            @preturn : list of maps files
         '''
-        maps = os.listdir('../cartes')
+        maps = os.listdir('cartes')
         mapNames = []
         for m in maps:
             mapNames.extend(m.split("."))
@@ -43,24 +43,32 @@ class mapReader():
             @param : str (map name)
             @return : list (map content)
         '''
-        fileAccess = 'cartes/' + mapName + '.txt'
+        fileAccess = 'cartes/' + mapName
         with open(fileAccess, 'r') as file:
             return list(file.read())
+    
+    @staticmethod
+    def isTmpMap():
+        if len(os.listdir('tmp')) > 1:
+            return True
+        else:
+            return False
             
+      
     @staticmethod        
     def readTmpMap():
         '''
             This function returns the map stored in the 'tmp' folder if it exists
             and a boolean that indicates if it exists or not
-            
             @param : None
             @return : Boolean, List (map containing)
         '''
         try:
-            with open('../tmp/mapTmp.txt', 'r') as tmpFile:
-                return True, list(tmpFile.read())
+            with open('tmp/mapTmp.txt', 'r') as tmpFile:
+                return list(tmpFile.read())
         except:
-            return False, []
+            print("Erreur à l'ouverture de la partie en cours")
+            return None
 
     @staticmethod
     def saveMap(mapContent):
@@ -72,7 +80,7 @@ class mapReader():
             @return: None 
         '''
         mapText = "".join(mapContent)
-        with open('../tmp/mapTmp.txt', 'w') as mapTmp:
+        with open('tmp/mapTmp.txt', 'w') as mapTmp:
             mapTmp.write(mapText)
         
     
@@ -87,8 +95,10 @@ class mapReader():
         mapAsTxt = "".join(mapContent)
         print(mapAsTxt)
 
-
-
+    @staticmethod
+    def deleteTmp():
+        os.remove('tmp/mapTmp.txt')
+        
 
 
 

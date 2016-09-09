@@ -4,13 +4,19 @@
 ---------------------
 
 Project by Laurent Richter.
+
 Initiated by OpenClassRooms.
 
-This is a Labyrinthe Game based on .txt maps (placed in the 'cartes' folder. 
+
+This is a Labyrinthe Game based on .txt maps (placed in the 'cartes' folder). 
 
 The whole code is in the 'labyrinthes' folder actually.
 
-If you have any suggestion, do not hesitate tu disturb myself. 
+The 'roboc.py' is the main file to run.
+
+If you have any suggestion, do not hesitate to disturb myself. 
+
+
 
 
 CONTRIBUTING :
@@ -22,5 +28,8 @@ CONTRIBUTING :
 5. Create new Pull Request
 
 
+
+
 Thx.
+
 L.
