@@ -23,9 +23,10 @@ class mapReader():
     
     @staticmethod
     def importMaps():
-        ''' Function that import the maps from the maps diectory :
+        '''
+            Function that import the maps from the maps diectory :
             @param : none
-            @preturn : list of maps files
+            @return : list of maps files
         '''
         maps = os.listdir('cartes')
         mapNames = []
@@ -41,7 +42,7 @@ class mapReader():
             @param : str (map name)
             @return : list (map content)
         '''
-        fileAccess = 'cartes/' + mapName
+        fileAccess = 'cartes'+ os.sep + mapName
         with open(fileAccess, 'r') as file:
            return list(file.read())
     
@@ -62,7 +63,7 @@ class mapReader():
             @return : Boolean, List (map containing)
         '''
         try:
-            with open('tmp/mapTmp.txt', 'r') as tmpFile:
+            with open(os.path.join(os.getcwd(), "tmp", "mapTmp.txt"), 'r') as tmpFile:
                 return list(tmpFile.read())
         except:
             print("Erreur à l'ouverture de la partie en cours")
@@ -77,7 +78,8 @@ class mapReader():
             @return: None 
         '''
         mapText = "".join(mapContent)
-        with open('tmp/mapTmp.txt', 'w') as mapTmp:
+
+        with open(os.path.join(os.getcwd(), "tmp", "mapTmp.txt"), 'w') as mapTmp:
             mapTmp.write(mapText)
         
     
@@ -94,4 +96,4 @@ class mapReader():
 
     @staticmethod
     def deleteTmp():
-        os.remove('tmp/mapTmp.txt')
+        os.remove(os.path.join(os.getcwd(), "tmp", "mapTmp.txt"))

@@ -85,7 +85,8 @@ class Game():
                     direction = entree[0]
                     moves = int("".join(entree[1:]))
             except:
-                print("Mauvaise Entrée")
+                print("Mauvaise Entrée. Les entrées valides sont : N,S,E,W")
+                print("et Q pour sauver et quitter.")
              
             if direction.upper() == "N":
                 self.mp.moveNorth(moves)
